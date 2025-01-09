@@ -3,7 +3,9 @@ const cors = require("cors");
 const invoiceRoutes = require("./routes/invoiceRoutes");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://invoice-gen-mocha.vercel.app"
+}));
 app.use(express.json());
 
 let invoices = []; // In-memory storage for invoices
