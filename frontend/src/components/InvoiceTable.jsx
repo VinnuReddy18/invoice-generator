@@ -7,7 +7,7 @@ function InvoiceTable({ refresh }) {
 
   useEffect(() => {
     const fetchInvoices = async () => {
-      const res = await axios.get("http://localhost:5000/api/invoices");
+      const res = await axios.get("https://backend-invoice-two.vercel.app/api/invoices");
       setInvoices(res.data);
     };
     fetchInvoices();
@@ -15,7 +15,7 @@ function InvoiceTable({ refresh }) {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/invoices/${id}`);
+      await axios.delete(`https://backend-invoice-two.vercel.app/api/invoices/${id}`);
       setInvoices(invoices.filter(invoice => invoice.id !== id));
     } catch (error) {
       console.error("Error deleting invoice:", error);
