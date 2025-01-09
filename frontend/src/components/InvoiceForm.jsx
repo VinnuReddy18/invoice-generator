@@ -36,7 +36,7 @@ function InvoiceForm({ onInvoiceSaved }) {
     setError("");
     const { subtotal, calculatedTotal } = calculateTotal();
     const newInvoice = { customerName, customerEmail, products, tax, total: calculatedTotal };
-    await axios.post("https://backend-invoice-two.vercel.app/api/invoices", newInvoice);
+    await axios.post("http://localhost:5000/api/invoices", newInvoice);
     setTotal(calculatedTotal);
     setShowPreview(true);
     onInvoiceSaved();
