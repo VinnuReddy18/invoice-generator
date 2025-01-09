@@ -1,54 +1,63 @@
 .invoice-table-container {
-  margin: 20px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.invoice-table-container:hover {
-  transform: scale(1.02);
-}
-
-.invoice-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.invoice-table th, .invoice-table td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-}
-
-.invoice-table th {
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.invoice-table th:hover {
-  background-color: #0056b3;
-}
-
-.invoice-table tr:hover {
-  background-color: #f1f1f1;
-  transition: background-color 0.3s;
-}
-
-.delete-button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.delete-button:hover {
-  background-color: #d32f2f;
-  transform: scale(1.05);
-} 
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15), -10px -10px 30px rgba(255, 255, 255, 0.6);
+    transition: transform 0.4s, box-shadow 0.4s;
+  }
+  
+  .invoice-table-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.25);
+  }
+  
+  .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .invoice-table th, .invoice-table td {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .invoice-table th {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .invoice-table th:hover {
+    background: linear-gradient(145deg, #0056b3, #003f87);
+    transition: background 0.3s ease;
+  }
+  
+  .invoice-table tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  .invoice-table tr:hover {
+    background: rgba(0, 123, 255, 0.1);
+  }
+  
+  .delete-button {
+    background: linear-gradient(145deg, #f44336, #d32f2f);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .delete-button:hover {
+    background: linear-gradient(145deg, #d32f2f, #b71c1c);
+    transform: scale(1.1);
+  }
+  
